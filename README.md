@@ -1,6 +1,6 @@
 # Everyday Table
 
-An incremental Eleventy recipe website. Phases 1 and 2 provide the static site foundation, five sample recipes, a central ingredient catalogue, validated data, responsive cards, and generated recipe detail pages. Interactive features are deferred.
+An incremental Eleventy recipe website. Phases 1–3 provide the static site foundation, five sample recipes, a central ingredient catalogue, validated data, responsive cards, generated recipe detail pages, recipe selection, and a saved meal plan. Shopping lists and serving controls are deferred.
 
 ## Run locally
 
@@ -29,7 +29,7 @@ The production build writes to `_site/`. Generated files and `node_modules/` are
 - `src/_includes/components/`: reusable navigation and footer; recipe cards, metadata, and ingredient lists; shopping components will follow.
 - `src/recipes/`: `recipe.njk` generates one page per recipe using Eleventy pagination.
 - `src/css/`, `src/js/`, `src/images/`: static assets, copied without bundling. Empty directories contain `.gitkeep` files.
-- `src/index.njk`, `src/meal-plan.njk`, `src/shopping-list.njk`: public pages. Meal plan and shopping list currently show explicit placeholders.
+- `src/index.njk`, `src/meal-plan.njk`, `src/shopping-list.njk`: public pages. Meal Plan shows selected recipes using browser modules; Shopping List remains a placeholder.
 
 Eleventy is the only direct development dependency. Its Nunjucks support avoids a separate template package. No runtime dependencies, framework, database, or bundler are needed.
 
@@ -37,7 +37,7 @@ Eleventy is the only direct development dependency. Its Nunjucks support avoids 
 
 Separate recipe and ingredient JSON files are the source of truth. `lib/validate-recipes.js` runs before every build and rejects unknown ingredient IDs, duplicate recipe IDs, invalid quantities, unsupported units, and missing required fields before generating recipe HTML. A Nunjucks template will also generate a compact static JSON endpoint with recipe summaries and ingredient quantities, omitting instructions. Pages needing client data can fetch that endpoint; the complete catalogue will not be embedded in every HTML page.
 
-Browser ES modules will keep storage, selection, DOM rendering, and pure aggregation separate. localStorage will store recipe IDs, serving counts, and purchased-item state, with graceful handling of unavailable or invalid storage. Shopping totals will normalise kg to g and L to ml, then group by ingredient ID and compatible unit; incompatible measurements remain separate. Ingredient categories come from the catalogue so more categories can be added later.
+Browser ES modules separate storage (`storage.js`), selection state and meal-plan rendering (`meal-plan.js`), and page controls (`recipes.js`). localStorage currently stores a versioned list of recipe IDs under `everyday-table:meal-plan:v1`. Serving counts and purchased-item state will be introduced in later phases. Shopping totals will normalise kg to g and L to ml, then group by ingredient ID and compatible unit; incompatible measurements remain separate. Ingredient categories come from the catalogue so more categories can be added later.
 
 Internal links use Eleventy’s `url` filter to support a future deployment path prefix. Deployment configuration will be added in Phase 6.
 
@@ -51,11 +51,22 @@ Images are deliberately labelled local SVG placeholders, not food photographs. R
 
 Phase 2 verification: the production build generates eight HTML pages. Generated recipe links, ingredient names, image files, and validation rejection of unknown ingredients and duplicate IDs were checked. Visual browser and formal accessibility testing have not yet been performed.
 
+## Using the meal plan
+
+Select **Add to meal plan** on any recipe card or detail page. The button changes to **Remove from meal plan**, and the navigation count updates. Open **Meal plan** to see selected recipes and remove them. The count measures recipes, not servings.
+
+Selections are saved in this browser on this site, with no account. They restore after reload or reopening and synchronise between open tabs. Local development and a hosted site have separate storage. Clearing browser data removes the saved plan.
+
+If saved data is malformed or storage is blocked/full, a visible message explains the issue. Selection still works in memory for the current page; unsaved changes cannot survive navigation or reload. Unknown recipe IDs are ignored, and duplicates are removed. With JavaScript disabled, recipe content stays available and the Meal Plan page explains that JavaScript is required.
+
+Only recipe IDs are embedded globally. The Meal Plan page reuses build-time recipe cards and shows the selected cards; no runtime data endpoint is needed in Phase 3. The compact static JSON endpoint for shopping data remains planned for Phase 4.
+
+Phase 3 checks: production build, JavaScript syntax checks, add/remove and restore logic, stale/duplicate IDs, malformed and unsupported storage versions, blocked reads, failed writes, generated meal-plan markup, and copied module assets passed. Visual browser, assistive-technology, and end-to-end interaction checks remain outstanding.
+
 ## Next phases
 
-3. Add selection, the meal plan interface, and localStorage persistence.
 4. Add pure aggregation, compatible unit conversion, category groups, and the shopping list interface.
 5. Add serving controls, search/filter, purchased checkboxes, clipboard support, and accessibility refinements.
 6. Test aggregation using Node’s built-in test runner, review accessibility and performance, and prepare deployment.
 
-Proceed to Phase 3 only after approval.
+Proceed to Phase 4 only after approval.

@@ -15,9 +15,10 @@
   --font-heading: Georgia, "Times New Roman", serif;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; color: var(--color-ink); background: var(--color-paper); font-family: var(--font-body); line-height: 1.6; }
 a { color: inherit; text-underline-offset: .25em; }
-a:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 5px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 5px; }
 .container { width: min(1120px, calc(100% - 2 * var(--space-3))); margin-inline: auto; }
 .skip-link { position: absolute; top: -100px; left: 1rem; padding: .75rem; background: white; z-index: 10; }
 .skip-link:focus { top: 1rem; }
@@ -72,6 +73,11 @@ h2 { margin: 0 0 var(--space-4); font-size: clamp(2rem, 4vw, 3rem); }
 .method-list { padding-left: 1.5rem; }
 .method-list li { padding-left: .5rem; margin-bottom: var(--space-3); }
 .method-list li::marker { color: var(--color-accent); font-weight: 700; }
+.selection-button { min-height: 44px; padding: .7rem 1rem; border: 1px solid var(--color-ink); border-radius: 4px; color: var(--color-ink); background: transparent; font: inherit; cursor: pointer; }
+.selection-button:hover { background: var(--color-surface); }
+.selection-button[aria-pressed="true"] { background: var(--color-ink); color: white; }
+.recipe-card.is-selected { border-color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-ink); }
+[data-storage-warning] { padding: var(--space-2); border: 1px solid var(--color-accent); border-radius: 4px; }
 @media (min-width: 800px) {
   .recipe-content { grid-template-columns: 1fr 1.7fr; }
 }

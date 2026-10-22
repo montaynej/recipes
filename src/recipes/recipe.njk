@@ -13,6 +13,7 @@ permalink: "/recipes/{{ recipe.id }}/index.html"
     <h1>{{ recipe.title | escape }}</h1>
     <p class="intro">{{ recipe.description | escape }}</p>
     {% include "components/recipe-meta.njk" %}
+    {% include "components/selection-button.njk" %}
   </header>
   <img class="recipe-photo" src="{{ recipe.image | url }}" alt="{{ recipe.imageAlt | escape }}" width="800" height="560" fetchpriority="high">
   <div class="recipe-content">

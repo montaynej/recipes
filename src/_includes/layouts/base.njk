@@ -10,9 +10,15 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     {% include "components/navigation.njk" %}
+    <div class="container">
+      <p data-storage-warning role="status" hidden></p>
+      <p class="visually-hidden" data-plan-status role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
     <main id="main" class="container" tabindex="-1">
       {{ content | safe }}
     </main>
     {% include "components/footer.njk" %}
+    <script type="application/json" data-recipe-ids>{{ recipes | recipeIdsJson | safe }}</script>
+    <script type="module" src="{{ '/js/recipes.js' | url }}"></script>
   </body>
 </html>

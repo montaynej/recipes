@@ -3,7 +3,7 @@
     <a class="brand" href="{{ '/' | url }}">Everyday<span>Table</span><span class="brand-dot" aria-hidden="true">.</span></a>
     <ul class="nav-links">
       <li><a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Recipes</a></li>
-      <li><a href="{{ '/meal-plan/' | url }}"{% if page.url == '/meal-plan/' %} aria-current="page"{% endif %}>Meal plan</a></li>
+      <li><a href="{{ '/meal-plan/' | url }}"{% if page.url == '/meal-plan/' %} aria-current="page"{% endif %}>Meal plan <span data-plan-count hidden>(0)</span></a></li>
       <li><a href="{{ '/shopping-list/' | url }}"{% if page.url == '/shopping-list/' %} aria-current="page"{% endif %}>Shopping list</a></li>
     </ul>
   </nav>
