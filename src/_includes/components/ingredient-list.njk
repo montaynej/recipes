@@ -1,0 +1,5 @@
+<ul class="ingredient-list">
+  {% for item in recipe.ingredients %}
+    <li><span class="ingredient-quantity">{{ item.quantity | quantity }}{% if item.unit != 'whole' %} {{ item.unit }}{% endif %}</span> {{ ingredients[item.id].name | escape }}</li>
+  {% endfor %}
+</ul>

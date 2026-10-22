@@ -1,4 +1,14 @@
+import { readFile } from 'node:fs/promises';
+import { validateRecipes } from './lib/validate-recipes.js';
+
 export default function (eleventyConfig) {
+  eleventyConfig.on('eleventy.before', async () => {
+    const [recipes, ingredients] = await Promise.all(
+      ['recipes', 'ingredients'].map(async name => JSON.parse(await readFile(new URL(`./src/_data/${name}.json`, import.meta.url), 'utf8')))
+    );
+    validateRecipes(recipes, ingredients);
+  });
+  eleventyConfig.addFilter('quantity', value => new Intl.NumberFormat('en-IE', { maximumFractionDigits: 2 }).format(value));
   // Polling is more reliable for source files in a OneDrive-synchronised folder.
   eleventyConfig.setChokidarConfig({ usePolling: true, interval: 500 });
   eleventyConfig.addPassthroughCopy("src/css");

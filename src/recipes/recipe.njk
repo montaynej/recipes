@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: recipes
+  size: 1
+  alias: recipe
+permalink: "/recipes/{{ recipe.id }}/index.html"
+---
+<article class="recipe-detail section">
+  <a class="text-link" href="{{ '/' | url }}#recipes"><span aria-hidden="true">←</span> All recipes</a>
+  <header class="recipe-heading">
+    <p class="eyebrow">{{ recipe.category | capitalize }}</p>
+    <h1>{{ recipe.title | escape }}</h1>
+    <p class="intro">{{ recipe.description | escape }}</p>
+    {% include "components/recipe-meta.njk" %}
+  </header>
+  <img class="recipe-photo" src="{{ recipe.image | url }}" alt="{{ recipe.imageAlt | escape }}" width="800" height="560" fetchpriority="high">
+  <div class="recipe-content">
+    <section aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Ingredients</h2>
+      <p>For {{ recipe.servings }} servings</p>
+      {% include "components/ingredient-list.njk" %}
+    </section>
+    <section aria-labelledby="method-heading">
+      <h2 id="method-heading">Let’s cook</h2>
+      <ol class="method-list">
+        {% for step in recipe.instructions %}<li>{{ step | escape }}</li>{% endfor %}
+      </ol>
+    </section>
+  </div>
+</article>

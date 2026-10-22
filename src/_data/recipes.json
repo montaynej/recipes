@@ -1,0 +1,242 @@
+[
+  {
+    "id": "banana-cinnamon-porridge",
+    "title": "Banana & cinnamon porridge",
+    "description": "Creamy oats, sweet banana, and a warming pinch of cinnamon. A gentle start to the day.",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": 5,
+    "cookTime": 8,
+    "image": "/images/banana-cinnamon-porridge.svg",
+    "imageAlt": "Illustrated placeholder for Banana & cinnamon porridge; food photograph coming soon.",
+    "ingredients": [
+      {
+        "id": "oats",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "id": "milk",
+        "quantity": 500,
+        "unit": "ml"
+      },
+      {
+        "id": "banana",
+        "quantity": 2,
+        "unit": "whole"
+      },
+      {
+        "id": "cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "instructions": [
+      "Put the oats, milk, and cinnamon in a saucepan. Bring to a gentle simmer over a medium heat, stirring regularly.",
+      "Reduce the heat and cook for 6\u20138 minutes, stirring until creamy. Add a splash of water if the porridge becomes too thick.",
+      "Slice the bananas. Divide the porridge between two bowls and top with the banana."
+    ]
+  },
+  {
+    "id": "spinach-eggs-on-toast",
+    "title": "Spinach eggs on toast",
+    "description": "Soft scrambled eggs and wilted spinach piled onto crisp wholemeal toast.",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": 5,
+    "cookTime": 10,
+    "image": "/images/spinach-eggs-on-toast.svg",
+    "imageAlt": "Illustrated placeholder for Spinach eggs on toast; food photograph coming soon.",
+    "ingredients": [
+      {
+        "id": "egg",
+        "quantity": 4,
+        "unit": "whole"
+      },
+      {
+        "id": "spinach",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "id": "bread",
+        "quantity": 160,
+        "unit": "g"
+      },
+      {
+        "id": "olive-oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Beat the eggs in a bowl. Toast the bread until crisp.",
+      "Heat the olive oil in a non-stick frying pan over a medium heat. Add the spinach and stir for 1\u20132 minutes until wilted.",
+      "Turn the heat to low and add the eggs. Gently fold with a spatula for 3\u20135 minutes, until set with no liquid egg remaining.",
+      "Divide the toast between two plates and spoon the eggs and spinach over the top."
+    ]
+  },
+  {
+    "id": "chickpea-feta-salad",
+    "title": "Chickpea & feta salad",
+    "description": "A bright, crunchy lunch with chickpeas, juicy tomatoes, and a lemon dressing.",
+    "category": "lunch",
+    "servings": 2,
+    "prepTime": 15,
+    "cookTime": 0,
+    "image": "/images/chickpea-feta-salad.svg",
+    "imageAlt": "Illustrated placeholder for Chickpea & feta salad; food photograph coming soon.",
+    "ingredients": [
+      {
+        "id": "chickpeas",
+        "quantity": 240,
+        "unit": "g"
+      },
+      {
+        "id": "tomato",
+        "quantity": 250,
+        "unit": "g"
+      },
+      {
+        "id": "cucumber",
+        "quantity": 200,
+        "unit": "g"
+      },
+      {
+        "id": "lemon",
+        "quantity": 1,
+        "unit": "whole"
+      },
+      {
+        "id": "feta",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "id": "olive-oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Rinse and drain the cooked chickpeas. Chop the tomatoes and cucumber into bite-sized pieces.",
+      "Squeeze the lemon into a large bowl and whisk in the olive oil.",
+      "Add the chickpeas, tomatoes, and cucumber. Toss until coated in the dressing.",
+      "Crumble the feta over the salad and divide between two bowls."
+    ]
+  },
+  {
+    "id": "tomato-spinach-pasta",
+    "title": "Tomato & spinach pasta",
+    "description": "A simple tomato sauce with garlic and tender spinach, ready for a relaxed weeknight dinner.",
+    "category": "dinner",
+    "servings": 4,
+    "prepTime": 10,
+    "cookTime": 20,
+    "image": "/images/tomato-spinach-pasta.svg",
+    "imageAlt": "Illustrated placeholder for Tomato & spinach pasta; food photograph coming soon.",
+    "ingredients": [
+      {
+        "id": "pasta",
+        "quantity": 320,
+        "unit": "g"
+      },
+      {
+        "id": "onion",
+        "quantity": 1,
+        "unit": "whole"
+      },
+      {
+        "id": "garlic",
+        "quantity": 2,
+        "unit": "whole"
+      },
+      {
+        "id": "chopped-tomatoes",
+        "quantity": 800,
+        "unit": "g"
+      },
+      {
+        "id": "spinach",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "id": "olive-oil",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Finely chop the onion and garlic. Heat the olive oil in a large pan and soften the onion over a medium heat for 5\u20137 minutes.",
+      "Add the garlic and cook for 1 minute. Add the chopped tomatoes and simmer gently for 12 minutes, stirring occasionally.",
+      "Meanwhile, cook the pasta in a large saucepan of boiling water according to the packet instructions. Reserve a mug of cooking water before draining.",
+      "Stir the spinach into the sauce until wilted. Add the drained pasta and a little reserved cooking water to loosen the sauce. Toss and serve."
+    ]
+  },
+  {
+    "id": "coconut-chicken-curry",
+    "title": "Coconut chicken curry",
+    "description": "A mild, comforting coconut curry with spinach, served over fluffy basmati rice.",
+    "category": "dinner",
+    "servings": 4,
+    "prepTime": 15,
+    "cookTime": 30,
+    "image": "/images/coconut-chicken-curry.svg",
+    "imageAlt": "Illustrated placeholder for Coconut chicken curry; food photograph coming soon.",
+    "ingredients": [
+      {
+        "id": "chicken",
+        "quantity": 500,
+        "unit": "g"
+      },
+      {
+        "id": "onion",
+        "quantity": 2,
+        "unit": "whole"
+      },
+      {
+        "id": "garlic",
+        "quantity": 2,
+        "unit": "whole"
+      },
+      {
+        "id": "curry-powder",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "id": "coconut-milk",
+        "quantity": 400,
+        "unit": "ml"
+      },
+      {
+        "id": "chopped-tomatoes",
+        "quantity": 400,
+        "unit": "g"
+      },
+      {
+        "id": "spinach",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "id": "rice",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "id": "olive-oil",
+        "quantity": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Chop the onions and garlic. Cut the chicken into bite-sized pieces, then wash your hands and clean the board and knife.",
+      "Heat the olive oil in a large pan over a medium heat. Soften the onions for 7 minutes, then stir in the garlic and curry powder for 1 minute.",
+      "Add the chicken and cook for 5 minutes, stirring. Add the coconut milk and tomatoes and bring to a gentle simmer.",
+      "Simmer for 15\u201320 minutes until the chicken is cooked through. Meanwhile, cook the rice according to the packet instructions.",
+      "Check that the chicken has no pink centre and is steaming hot throughout. Stir in the spinach until wilted, then serve with the rice."
+    ]
+  }
+]

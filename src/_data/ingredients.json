@@ -1,0 +1,107 @@
+{
+  "oats": {
+    "name": "Rolled oats",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "milk": {
+    "name": "Milk",
+    "category": "fresh",
+    "defaultUnit": "ml"
+  },
+  "banana": {
+    "name": "Bananas",
+    "category": "fresh",
+    "defaultUnit": "whole"
+  },
+  "cinnamon": {
+    "name": "Ground cinnamon",
+    "category": "stock",
+    "defaultUnit": "tsp"
+  },
+  "egg": {
+    "name": "Eggs",
+    "category": "fresh",
+    "defaultUnit": "whole"
+  },
+  "spinach": {
+    "name": "Baby spinach",
+    "category": "fresh",
+    "defaultUnit": "g"
+  },
+  "bread": {
+    "name": "Wholemeal bread",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "olive-oil": {
+    "name": "Olive oil",
+    "category": "stock",
+    "defaultUnit": "tbsp"
+  },
+  "chickpeas": {
+    "name": "Cooked chickpeas, drained",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "tomato": {
+    "name": "Tomatoes",
+    "category": "fresh",
+    "defaultUnit": "g"
+  },
+  "cucumber": {
+    "name": "Cucumber",
+    "category": "fresh",
+    "defaultUnit": "g"
+  },
+  "lemon": {
+    "name": "Lemons",
+    "category": "fresh",
+    "defaultUnit": "whole"
+  },
+  "feta": {
+    "name": "Feta",
+    "category": "fresh",
+    "defaultUnit": "g"
+  },
+  "onion": {
+    "name": "Onions",
+    "category": "fresh",
+    "defaultUnit": "whole"
+  },
+  "garlic": {
+    "name": "Garlic cloves",
+    "category": "fresh",
+    "defaultUnit": "whole"
+  },
+  "chopped-tomatoes": {
+    "name": "Tinned chopped tomatoes",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "pasta": {
+    "name": "Dried pasta",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "chicken": {
+    "name": "Chicken breast",
+    "category": "fresh",
+    "defaultUnit": "g"
+  },
+  "rice": {
+    "name": "Basmati rice",
+    "category": "stock",
+    "defaultUnit": "g"
+  },
+  "curry-powder": {
+    "name": "Curry powder",
+    "category": "stock",
+    "defaultUnit": "tbsp"
+  },
+  "coconut-milk": {
+    "name": "Coconut milk",
+    "category": "stock",
+    "defaultUnit": "ml"
+  }
+}

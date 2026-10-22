@@ -47,6 +47,34 @@ h2 { margin: 0 0 var(--space-4); font-size: clamp(2rem, 4vw, 3rem); }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; gap: var(--space-2); }
 .site-footer { margin-top: var(--space-4); border-top: 1px solid var(--color-line); padding-block: var(--space-3); color: var(--color-muted); font-size: .8rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 var(--space-3); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.collection-intro { color: var(--color-muted); margin-bottom: var(--space-4); }
+.recipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: var(--space-4); }
+.recipe-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--color-line); border-radius: 8px; overflow: hidden; }
+.recipe-card img { display: block; width: 100%; height: auto; aspect-ratio: 10 / 7; object-fit: cover; }
+.recipe-card-body { display: flex; flex-direction: column; flex: 1; padding: var(--space-3); }
+.recipe-card h3 { margin: 0; font: 400 1.8rem/1.2 var(--font-heading); }
+.recipe-card h3 a { text-decoration: none; }
+.recipe-card h3 a:hover { text-decoration: underline; }
+.recipe-card-body > p:not(.eyebrow) { color: var(--color-muted); }
+.recipe-card .recipe-meta { margin-top: auto; }
+.recipe-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-block: var(--space-3); }
+.recipe-meta dt { font-size: .8rem; color: var(--color-muted); }
+.recipe-meta dd { margin: 0; font-weight: 650; }
+.recipe-heading { max-width: 850px; padding-block: var(--space-4); }
+.recipe-heading h1 { font-size: clamp(2.5rem, 6vw, 4.7rem); }
+.recipe-photo { width: 100%; max-height: 500px; height: auto; object-fit: cover; border-radius: 8px; }
+.recipe-content { display: grid; gap: var(--space-5); margin-block: var(--space-5); }
+.recipe-content h2 { font-size: 2.3rem; }
+.ingredient-list { list-style: none; padding: 0; }
+.ingredient-list li { padding-block: .85rem; border-bottom: 1px solid var(--color-line); }
+.ingredient-quantity { font-weight: 650; margin-right: .4rem; }
+.method-list { padding-left: 1.5rem; }
+.method-list li { padding-left: .5rem; margin-bottom: var(--space-3); }
+.method-list li::marker { color: var(--color-accent); font-weight: 700; }
+@media (min-width: 800px) {
+  .recipe-content { grid-template-columns: 1fr 1.7fr; }
+}
 @media (min-width: 800px) {
   .hero-note { position: absolute; right: 0; bottom: var(--space-5); max-width: 12rem; }
 }

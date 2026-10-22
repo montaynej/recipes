@@ -13,8 +13,10 @@ description: Simple recipes and thoughtful meal planning for your everyday table
 <section class="section" id="recipes" aria-labelledby="recipes-heading">
   <p class="eyebrow">The recipe collection</p>
   <h2 id="recipes-heading">Your next favourite starts here.</h2>
-  <div class="empty-state">
-    <p class="status-label">The kitchen is getting ready</p>
-    <p>Our first recipes are on their way. Soon you’ll find easy ideas for breakfast, lunch, and dinner right here.</p>
+  <p class="collection-intro">Five simple ideas for breakfast, lunch, and dinner. Find your next meal below.</p>
+  <div class="recipe-grid">
+    {% for recipe in recipes %}
+      {% include "components/recipe-card.njk" %}
+    {% endfor %}
   </div>
 </section>
