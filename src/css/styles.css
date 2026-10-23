@@ -75,6 +75,9 @@ h2 { margin: 0 0 var(--space-4); font-size: clamp(2rem, 4vw, 3rem); }
 .method-list li::marker { color: var(--color-accent); font-weight: 700; }
 .selection-button { min-height: 44px; padding: .7rem 1rem; border: 1px solid var(--color-ink); border-radius: 4px; color: var(--color-ink); background: transparent; font: inherit; cursor: pointer; }
 .selection-button:hover { background: var(--color-surface); }
+.shopping-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--space-4); margin-top: var(--space-4); }
+.shopping-group { min-width: 0; background: var(--color-surface); padding: var(--space-3); border-radius: 8px; }
+.shopping-group h2 { font-size: 2rem; }
 .selection-button[aria-pressed="true"] { background: var(--color-ink); color: white; }
 .recipe-card.is-selected { border-color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-ink); }
 [data-storage-warning] { padding: var(--space-2); border: 1px solid var(--color-accent); border-radius: 4px; }

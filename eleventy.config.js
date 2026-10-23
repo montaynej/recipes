@@ -4,6 +4,10 @@ import { validateRecipes } from './lib/validate-recipes.js';
 export default function (eleventyConfig) {
   // Only validated slug IDs are embedded globally; full recipe data stays out.
   eleventyConfig.addFilter('recipeIdsJson', recipes => JSON.stringify(recipes.map(({ id }) => id)));
+  eleventyConfig.addFilter('shoppingDataJson', (recipes, ingredients) => JSON.stringify({
+    recipes: recipes.map(({ id, servings, ingredients }) => ({ id, servings, ingredients })),
+    ingredients
+  }));
   eleventyConfig.on('eleventy.before', async () => {
     const [recipes, ingredients] = await Promise.all(
       ['recipes', 'ingredients'].map(async name => JSON.parse(await readFile(new URL(`./src/_data/${name}.json`, import.meta.url), 'utf8')))

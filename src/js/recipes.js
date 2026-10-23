@@ -6,6 +6,16 @@ const validIds = JSON.parse(catalogue.textContent);
 let { ids, warning } = readSelection(validIds);
 const status = document.querySelector('[data-plan-status]');
 const notice = document.querySelector('[data-storage-warning]');
+let renderShoppingList;
+const shoppingRoot = document.querySelector('[data-shopping-list]');
+if (shoppingRoot) {
+  import('./shopping-list-ui.js').then(({ mountShoppingList }) => {
+    renderShoppingList = mountShoppingList(shoppingRoot);
+    renderShoppingList(ids);
+  }).catch(() => {
+    shoppingRoot.querySelector('[data-shopping-status]').textContent = 'The shopping list could not start. Please reload this page.';
+  });
+}
 
 function render() {
   document.querySelectorAll('[data-plan-count]').forEach(count => {
@@ -23,6 +33,7 @@ function render() {
   notice.textContent = warning;
   notice.hidden = !warning;
   renderMealPlan(ids);
+  renderShoppingList?.(ids);
 }
 
 document.addEventListener('click', event => {
